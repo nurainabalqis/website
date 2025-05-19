@@ -1,0 +1,229 @@
+/*****************************************************
+* Author of the page:                                *
+* Nur Aina Balqis Binti Mohamad Zaparin              *
+* Matric No : A23CS0151                              *
+* Section : 10                                       *
+*****************************************************/
+
+body {
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #ff7eb3, #ff758c);
+    color: white;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+}
+
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px 120px;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+
+.homePage {
+    text-align: center;
+    padding: 5rem 2rem;
+}
+
+.cta {
+    background: #ff5757;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cta:hover {
+    background: #e63e3e;
+}
+
+
+
+
+.about-card {
+    background: pink;
+    width: fit-content;
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 20px rgba(0, 123, 255, 0.3);
+    border: 4px solid #fff;
+    transition: transform 0.3s ease-in-out;
+    
+}
+
+.profile-img:hover {
+    transform: scale(1.15);
+}
+
+.about-content {
+    flex: 1;
+    font-family: 'Segoe UI', sans-serif;
+    animation: slideIn 1.2s ease forwards;
+}
+
+.about-content h2 {
+    font-family: Georgia;
+    color: #ff758c;
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+}
+
+.highlight {
+    color:darkmagenta;
+}
+
+.highlight2 {
+    color:#ff5757;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #ff758c;
+}
+
+
+
+
+
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 1rem;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #ff5757;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.download-btn:hover {
+    background-color: #e63e3e;
+}
+
+
+
+
+
+footer {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #ffcce0;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+
+
+
+
+@keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .about-card {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    main {
+        padding: 40px 20px 150px;
+    }
+}
